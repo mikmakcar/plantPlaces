@@ -6,22 +6,77 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mikmak.plantplaces.MainActivity" >
+    tools:context="com.mikmak.plantplaces.GPSAPlantActivity" >
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/lblGPSAPlant" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="17dp"
+        android:text="@string/lblDescription" />
+
+    <EditText
+        android:id="@+id/edtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="14dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/searchBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="34dp"
+        android:layout_alignLeft="@+id/edtDescription"
+        android:layout_below="@+id/edtDescription"
+        android:layout_marginTop="19dp"
         android:onClick="searchClicked"
         android:text="Search" />
+
+    <TextView
+        android:id="@+id/txtLat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/searchBtn"
+        android:layout_centerVertical="true"
+        android:text="@string/txtLat" />
+
+    <TextView
+        android:id="@+id/txtLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtLat"
+        android:layout_below="@+id/txtLat"
+        android:layout_marginTop="14dp"
+        android:text="@string/txtLong" />
+
+    <TextView
+        android:id="@+id/txtLongVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtLong"
+        android:layout_alignBottom="@+id/txtLong"
+        android:layout_centerHorizontal="true"
+        android:text="@string/txtLongtitudeVal" />
+
+    <TextView
+        android:id="@+id/txtLatVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtLong"
+        android:layout_alignLeft="@+id/txtLongVal"
+        android:text="@string/txtLatitudeVal" />
 
 </RelativeLayout>

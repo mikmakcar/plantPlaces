@@ -5,15 +5,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity {
+public class GPSAPlantActivity extends ActionBarActivity {
 
+	EditText description;
+	String strDescription;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        description=(EditText) findViewById(R.id.edtDescription);
+       
     }
 
 
@@ -38,7 +43,9 @@ public class MainActivity extends ActionBarActivity {
     
     public void searchClicked(View v)
     {
-    	
-    	Toast.makeText(this, "Search Clicked", Toast.LENGTH_LONG).show();
+    	 strDescription=description.getText().toString();
+         
+         	
+    	Toast.makeText(this, strDescription, Toast.LENGTH_LONG).show();
     }
 }

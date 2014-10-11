@@ -4,5 +4,11 @@
     <string name="app_name">PlantPlaces</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="lblGPSAPlant">GPS  A Plant</string>
+    <string name="lblDescription">Description of the plant:</string>
+    <string name="txtLat">Latitude</string>
+    <string name="txtLong">Lontitude</string>
+    <string name="txtLatitudeVal">Latitude Value</string>
+    <string name="txtLongtitudeVal">Longtitude Value</string>
 
 </resources>
